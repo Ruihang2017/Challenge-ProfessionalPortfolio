@@ -1,18 +1,33 @@
 :root {
     --headerHeight: 40px;
+    --colourBoarderPrimary: rgb(50, 214, 214);
+    --colourTextPrimary: white;
 }
 
 ::selection {}
 
 * {}
 
-body {}
+body {
+    /* container */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 400px;
+
+}
 
 header {
     display: flex;
     flex-direction: column;
 }
 
+main {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    /* padding: 0px; */
+}
 
 .webMenu {
     display: flex;
@@ -24,20 +39,31 @@ header {
 
     /* for testing */
     background-color: blue;
-
 }
 
 .webCover {
     order: 1;
+    margin: 0 20px;
+
+    /* container */
+    /* Set the desired aspect ratio (e.g., 5:1 = 20%) */
+    position: relative;
+    padding-bottom: 20%;
+}
+
+.webCover img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .webHeader {
     display: flex;
     flex-direction: row;
-    /* width: 100%; */
-
 }
-
 
 .nav {
     /* fill up the remaining space of the nav .webHeader */
@@ -55,10 +81,7 @@ header {
 
     /* occupyt the full height of the nav bar*/
     height: 100%;
-
     text-align: center;
-
-
 
     /* the colour is for testing purposes */
     background-color: brown;
@@ -66,9 +89,6 @@ header {
 }
 
 .nav li {
-    /* flex: 0 0 10%;
-    max-width: 10%; */
-    /* text-align: center; */
     background-color: bisque;
 }
 
@@ -76,20 +96,92 @@ header {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+
+    margin: 20px;
+
 }
 
 .itemHeader {
-    /* width: 25%; */
-    flex: 1 1 25%;
-    min-width: 150px;
-    border: 5px solid black;
+    /* flex: 1 1 15%; */
+    /* item */
+    flex: 1 1 100%;
+
+    min-width: 100px;
+    border-bottom: 3px solid var(--colourBoarderPrimary);
+    min-height: 50px;
+    text-align: center;
+
+    padding-right: 10px;
+
+    /* container */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .itemContent {
-    /* width: 75%; */
-    flex: 1 1 75%;
+    /* item */
+    flex: 1 1 85%;
+    min-height: 50px;
+    padding: 10px 10px 10px 10px;
 
-    border: 5px solid rgb(82, 146, 167);
+    /* container */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+/* .itemContentFigure {
+    min-height: 100px;
+
+} */
+
+.itemContentFigure {
+    /* item */
+    flex: 1 1 100%;
+    margin: 1.25%;
+
+    /* container */
+    /* Set the desired aspect ratio */
+    position: relative;
+    padding-bottom: 30%;
+}
+
+#figureWorkOne {
+    padding-bottom: 50%;
+
+}
+
+.itemContentFigure img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.itemContentFigure div {
+    position: absolute;
+    z-index: 1;
+    bottom: 0px;
+    left: 0px;
+    /* height: 20%;
+    min-height: 70px; */
+    overflow: hidden;
+    background-color: rgba(95, 95, 95, 0.7);
+    padding: 10px;
+    color: var(--colourTextPrimary);
+    border-radius: 0 0 20px 20px;
+
+}
+
+.itemHeader p {}
+
+footer {
+    min-height: 50px;
 }
 
 
@@ -103,6 +195,28 @@ header {
     .nav ul {
         flex-direction: row;
     }
+
+    .itemHeader {
+        flex: 1 1 15%;
+        text-align: right;
+        border-bottom: 0px solid var(--colourBoarderPrimary);
+        border-right: 5px solid var(--colourBoarderPrimary);
+
+        display: block;
+    }
+
+    .itemContent {
+        padding: 0px 0px 0px 10px;
+
+    }
+
+    #figureWorkTwo,
+    #figureWorkThree,
+    #figureWorkFour,
+    #figureWorkFive {
+        flex: 1 1 47.5%;
+    }
+
 }
 
-/* @media screen and (max-width: 768px) {} */
+/* @media screen and (min-width: 768px) {} */
