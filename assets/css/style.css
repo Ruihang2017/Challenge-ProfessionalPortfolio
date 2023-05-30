@@ -5,6 +5,7 @@
     --colourOne: rgba(100, 63, 140, 1);
     --colourTwo: rgb(225, 91, 227);
     --colourThree: rgba(100, 63, 140, 0.6);
+    --colourFour: rgb(56, 34, 78);
     --colourWhiteMask: rgba(255, 255, 255, 0.3);
     --colourTextOne: white;
 }
@@ -40,17 +41,20 @@ body {
 header {
     display: flex;
     flex-direction: column;
+    background-image: url(../image/coverImgs/coverImg03.png);
+    background-size: cover;
 }
 
 main {
     max-width: 1100px;
     width: 100%;
     margin: 0 auto;
-    /* padding: 0px; */
-    /* background-color: var(--colourWhiteMask); */
+
 }
 
 .webMenu {
+    /* order: 0; */
+
     display: flex;
     flex-direction: column;
     order: 0;
@@ -59,12 +63,15 @@ main {
     line-height: var(--headerHeight);
 
     /* for testing */
-    background-color: blue;
+    /* background-color: blue; */
 }
 
 .webCover {
-    order: 1;
-    margin: 0 20px;
+    flex: 1 1 100%;
+    order: -1;
+    margin: 0px;
+
+    min-height: 200px;
 
     /* container */
     /* Set the desired aspect ratio (e.g., 5:1 = 20%) */
@@ -72,30 +79,44 @@ main {
     padding-bottom: 20%;
 }
 
-.webCover .coverImage {
+/* .webCover .coverImage {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
+} */
 
 .webCover .avatar {
     position: absolute;
     top: 0%;
     left: 40%;
     width: 20%;
-    min-width: 100px;
+    min-width: 150px;
+    max-width: 300px;
     height: 100%;
     object-fit: contain;
     /* border: 3px solid white; */
 }
 
-.webHeader {
+.webCover #welcomeMessage {
+    position: absolute;
+    bottom: 3%;
+    width: 100%;
+    text-align: right;
+    padding-right: 3%;
+    color: var(--colourFour);
+}
+
+.webCover h1 {
+    font-size: 2em;
+}
+
+/* .webHeader {
     display: flex;
     flex-direction: row;
-}
+} */
 
 .nav {
     /* fill up the remaining space of the nav .webHeader */
@@ -114,14 +135,14 @@ main {
     /* occupyt the full height of the nav bar*/
     height: 100%;
     text-align: center;
-
+    color: var(--colourFour);
     /* the colour is for testing purposes */
-    background-color: brown;
 
 }
 
 .nav li {
-    background-color: bisque;
+    margin: 0 20px;
+    border-bottom: 3px solid var(--colourThree);
 }
 
 .item {
@@ -144,7 +165,7 @@ main {
     text-align: center;
 
     padding-right: 10px;
-
+    color: var(--colourFour);
     /* container */
     display: flex;
     flex-direction: row;
@@ -300,6 +321,10 @@ footer h3 {
 
     .itemContentFigure p {
         display: block;
+    }
+
+    .webCover {
+        order: 0;
     }
 
     .webCover .avatar {
