@@ -104,7 +104,7 @@ main {
     position: absolute;
     bottom: 3%;
     width: 100%;
-    text-align: right;
+    text-align: center;
     padding-right: 3%;
     color: var(--colourFour);
 }
@@ -329,6 +329,10 @@ footer h3 {
 
     .webCover .avatar {
         left: 2%;
+    }
+
+    .webCover #welcomeMessage {
+        text-align: right;
     }
 
     #contactMeItemContent div {
