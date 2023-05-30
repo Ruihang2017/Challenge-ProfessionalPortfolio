@@ -5,8 +5,7 @@
     --colourOne: rgba(100, 63, 140, 1);
     --colourTwo: rgb(225, 91, 227);
     --colourThree: rgba(100, 63, 140, 0.6);
-
-
+    --colourWhiteMask: rgba(255, 255, 255, 0.3);
     --colourTextOne: white;
 }
 
@@ -47,6 +46,7 @@ main {
     width: 100%;
     margin: 0 auto;
     /* padding: 0px; */
+    /* background-color: var(--colourWhiteMask); */
 }
 
 .webMenu {
@@ -248,7 +248,14 @@ main {
 
 
 footer {
+    background-color: var(--colourThree);
     min-height: 50px;
+    color: var(--colourTextOne);
+    text-align: center;
+}
+
+footer h3 {
+    line-height: 50px;
 }
 
 
