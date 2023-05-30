@@ -1,10 +1,13 @@
 :root {
     --headerHeight: 40px;
+    --itemLineHeight: 30px;
     /* --colourBoarderPrimary: rgb(50, 214, 214); */
-    --colourBoarderPrimary: rgba(100, 63, 140, 1);
-    --colourShadowPrimary: rgb(225, 91, 227);
+    --colourOne: rgba(100, 63, 140, 1);
+    --colourTwo: rgb(225, 91, 227);
+    --colourThree: rgba(100, 63, 140, 0.6);
 
-    --colourTextPrimary: white;
+
+    --colourTextOne: white;
 }
 
 ::selection {}
@@ -85,6 +88,7 @@ main {
     min-width: 100px;
     height: 100%;
     object-fit: contain;
+    /* border: 3px solid white; */
 }
 
 .webHeader {
@@ -134,7 +138,7 @@ main {
     flex: 1 1 100%;
 
     min-width: 100px;
-    border-bottom: 3px solid var(--colourBoarderPrimary);
+    border-bottom: 3px solid var(--colourOne);
     min-height: 50px;
     text-align: center;
 
@@ -201,7 +205,7 @@ main {
     overflow: hidden;
     background-color: rgba(95, 95, 95, 0.7);
     padding: 10px;
-    color: var(--colourTextPrimary);
+    color: var(--colourTextOne);
     border-radius: 0 0 20px 20px;
 
 }
@@ -212,9 +216,42 @@ main {
 
 .itemHeader p {}
 
+#contactMeItemContent,
+#resumeItemContent {
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 0px 2%;
+
+}
+
+#contactMeItemContent a,
+#resumeItemContent a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#contactMeItemContent div,
+#resumeItemContent div {
+    flex: 1 1 100%;
+    text-align: center;
+
+    background-color: var(--colourThree);
+    line-height: var(--itemLineHeight);
+    border-radius: calc(var(--itemLineHeight)/2);
+    margin: 5px;
+    color: var(--colourTextOne);
+
+}
+
+
+
 footer {
     min-height: 50px;
 }
+
+
 
 
 @media screen and (min-width: 768px) {
@@ -231,8 +268,8 @@ footer {
     .itemHeader {
         flex: 1 1 15%;
         text-align: right;
-        border-bottom: 0px solid var(--colourBoarderPrimary);
-        border-right: 5px solid var(--colourBoarderPrimary);
+        border-bottom: 0px solid var(--colourOne);
+        border-right: 5px solid var(--colourOne);
 
         display: block;
     }
@@ -257,6 +294,9 @@ footer {
         left: 2%;
     }
 
+    #contactMeItemContent div {
+        flex: 1 1 33.33%;
+    }
 }
 
 /* @media screen and (min-width: 768px) {} */
