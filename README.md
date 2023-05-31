@@ -9,9 +9,10 @@ Please note that the work examples showcased in the "Work" section are purely in
 ## Website Sample
 Below, you can find screenshots of the website displaying how it appears on both desktop and mobile screens.
 
+### Desktop view:
 ![Desktop view:](./assets/image/samples/Screenshot%202023-05-31%20at%2010.12.11%20pm.png)
 
-Below is an image of the website on a mobile sceen.
+### Mobile view:
 ![Mobile view:](./assets/image/samples/Screenshot%202023-05-31%20at%2010.12.57%20pm.png)
 
 ## Installation
