@@ -252,6 +252,7 @@ main {
 
 }
 
+.nav a,
 #contactMeItemContent a,
 #resumeItemContent a {
     text-decoration: none;

@@ -20,16 +20,16 @@
             <nav class="nav">
                 <ul>
                     <li>
-                        <h1>About Me</h1>
+                        <h1><a href="#aboutMe">About Me</a></h1>
                     </li>
                     <li>
-                        <h1>Work</h1>
+                        <h1><a href="#work">Work</a></h1>
                     </li>
                     <li>
-                        <h1>Me</h1>
+                        <h1><a href="#contactMe">Me</a></h1>
                     </li>
                     <li>
-                        <h1>Resume</h1>
+                        <h1><a href="#resume">Resume</a></h1>
                     </li>
                 </ul>
             </nav>
@@ -38,14 +38,14 @@
         <figure class="webCover">
             <img class="avatar" alt="avatar" src="./assets/image/photoforwebsite2-04.png" />
             <div id="welcomeMessage">
-                <h1>Welcome to my portfolio</h1>
+                <h1>Ruihang(Horace) HOU's portfolio</h1>
             </div>
         </figure>
 
     </header>
 
     <main>
-        <article class="item">
+        <article class="item" id="aboutMe">
             <div class="itemHeader">
                 <h1>About</h1>
                 <h1>Me</h1>
@@ -61,12 +61,13 @@
                     into unknown and learning about cutting-edge technologies.</p>
             </div>
         </article>
-        <article class="item">
+        <article class="item" id="work">
             <div class="itemHeader">
                 <h1>Work</h1>
             </div>
             <div class="itemContent">
-                <figure class="itemContentFigure" id="figureWorkOne">
+                <figure class="itemContentFigure" id="figureWorkOne"
+                    onclick="redirectToPage('https://ruihang2017.github.io/01-Challenge-HTML-Git-CSS/')">
                     <img alt="Blogging Platform" src="./assets/image/bloggingPlatform.jpeg" />
                     <div>
                         <h2>Blogging Platform</h2>
@@ -75,7 +76,8 @@
                             displaying blog posts, and editing/deleting posts. </p>
                     </div>
                 </figure>
-                <figure class="itemContentFigure" id="figureWorkTwo">
+                <figure class="itemContentFigure" id="figureWorkTwo"
+                    onclick="redirectToPage('https://ruihang2017.github.io/01-Challenge-HTML-Git-CSS/')">
                     <img alt="Weather Application" src="./assets/image/Weather Application.jpeg" />
                     <div>
                         <h2>Weather Application</h2>
@@ -83,7 +85,8 @@
                             forecast of a specific location. </p>
                     </div>
                 </figure>
-                <figure class="itemContentFigure" id="figureWorkThree">
+                <figure class="itemContentFigure" id="figureWorkThree"
+                    onclick="redirectToPage('https://ruihang2017.github.io/01-Challenge-HTML-Git-CSS/')">
                     <img alt="Recipe Finder" src="./assets/image/recipeFinder.webp" />
                     <div>
                         <h2>Recipe Finder</h2>
@@ -91,7 +94,8 @@
                             on ingredients or categories.</p>
                     </div>
                 </figure>
-                <figure class="itemContentFigure" id="figureWorkFour">
+                <figure class="itemContentFigure" id="figureWorkFour"
+                    onclick="redirectToPage('https://ruihang2017.github.io/01-Challenge-HTML-Git-CSS/')">
                     <img alt="To-Do List" src="./assets/image/to-DoList.png" />
                     <div>
                         <h2>To-Do List</h2>
@@ -99,7 +103,8 @@
                             lists. </p>
                     </div>
                 </figure>
-                <figure class="itemContentFigure" id="figureWorkFive">
+                <figure class="itemContentFigure" id="figureWorkFive"
+                    onclick="redirectToPage('https://ruihang2017.github.io/01-Challenge-HTML-Git-CSS/')">
                     <img alt="Quiz Application" src="./assets/image/quizApplication.avif" />
                     <div>
                         <h2>Quiz Application</h2>
@@ -109,7 +114,7 @@
                 </figure>
             </div>
         </article>
-        <article class="item">
+        <article class="item" id="contactMe">
             <div class="itemHeader">
                 <h1>Contact</h1>
                 <h1>Me</h1>
@@ -124,7 +129,7 @@
                 </div>
             </div>
         </article>
-        <article class="item">
+        <article class="item" id="resume">
             <div class="itemHeader">
                 <h1>Resume</h1>
             </div>
@@ -140,6 +145,13 @@
     <footer>
         <h3>© 2023 RUIHANG HOU PORTFOLIO. All rights reserved.</h3>
     </footer>
+
+    <script>
+        let redirectToPage = (url) => {
+            window.location.href = url;
+            console.log(url);
+        }
+    </script>
 
 </body>
 
