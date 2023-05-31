@@ -21,7 +21,7 @@ N/A
 
 ## Deployment
 
-tbd
+(https://ruihang2017.github.io/Challenge-ProfessionalPortfolio/)
 
 ## License
 
